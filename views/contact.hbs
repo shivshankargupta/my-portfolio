@@ -1,0 +1,109 @@
+<main role="main">
+    <div class="album py-3 bg-info" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 project-detail-s bg-warning">
+
+                    <div class="project-sidebar-block no-top-margin">
+                        <img class="" src="/images/shiv.png" style="width: 130PX;">
+                    </div>
+
+                    {{!-- list --}}
+                    <hr>
+                    <div>
+
+                        <ul style="list-style: none;">
+                            <li style="color: blue; font-size:20px; color:white;">Link</li>
+                            <li><a class="text-white" href="https://www.linkedin.com/in/shiv-shankar-shiv-shankar-7044a1197/">linkdin</a>
+                            </li>
+                            <li><a  class="text-white" href="https://www.facebook.com/">facebook</a></li>
+                            <li><a class="text-white" href="https://twitter.com/login">twitter</a></li>
+
+
+                        </ul>
+
+                        <p style="color: rgb(4, 0, 255); font-size:20px; margin-right:60px;">about this project</p>
+                        <ul style="list-style: none;">
+                            <li><a class="text-white" href="https://www.express.com/">EXPRESS.JS</a></li>
+                            <li><a class="text-white" href="https://nodejs.org/en/">NODE.JS</a></li>
+                            <li><a class="text-white" href="https://nodejs.org/en/">HBS</a></li>
+                            <li><a class="text-white" href="https://www.mongodb.com/">MONGOdB</a></li>
+                            <li><a class="text-white" href="https://www.w3schools.com/css/">CSS</a></li>
+                            <li><a class="text-white"href="https://www.w3schools.com/html/">HTML</a></li>
+
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-9">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item bc-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item" aria-current="page">Contact</li>
+                        </ol>
+                    </nav>
+
+
+                    <div class="project-sidebar-block">
+                        <form action="/contact" method="POST">
+                            <div class="mb-4">
+                                <h1 class="h3 mb-3 font-weight-normal ">Contact Me
+                                </h1>
+
+                            </div>
+                            <br>
+
+                            {{#if erros}}
+                            {{#each messages}}
+                            <div class="alert alert-danger" role="alert">
+                                {{this}}
+                            </div>
+                            {{/each}}
+                            {{/if}}
+
+                            {{#if success}}
+                            <div class="alert alert-success" role="alert">
+                                thank you for contacting us.we will get back at the earliest.
+                            </div>
+                            {{/if}}
+
+                            <div class="form-group " style="color: yellow;">
+                                <label for="name ">Name</label>
+                                <input type="text" name="name" id="name" class="form-control " placeholder="Name"
+                                    autofocus value="{{name}}" required>
+                            </div>
+                            <br>
+                            <div class="form-group"style="color: yellow;">
+                                <label for="email ">Email</label>
+                                <input type="email" name="email" id="email" class="form-control "
+                                    placeholder="Email address" value="{{email}}" required>
+                            </div>
+                            <br>
+                            <div class="form-group"style="color: yellow;">
+                                <label for="mobile">Mobile</label>
+                                <input type="number" name="mobile" id="mobile" class="form-control" placeholder="Mobile"
+                                    value="{{mobile}}" required>
+                            </div>
+
+                            <div class="form-group">
+                                <br>
+                                <textarea name="description" id="description" rows="5" class="form-control "
+                                    placeholder="Description">{{description}}</textarea>
+                            </div>
+
+                            <br>
+                            <button class="btn btn-primary btn- h-100 w-100" type="submit">Submit</button>
+                            <br>
+                            <br>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

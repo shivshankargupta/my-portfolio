@@ -1,0 +1,151 @@
+<div class="main ">
+    <!-- my introduction -->
+    <div class="container-fluid ">
+        <div class="row  home-project">
+            <div class="col-md-7 mt-5  ">
+                <h1 class="w-100  text-light mt-5 " style="margin-left:190px; font-size: 20px; width:100px; ">HI.I AM
+                    SHIV SHANKAR
+                    GUPTA
+                </h1>
+                <p class="container text-light text-center ">my name is shiv
+                    shankar
+                    I am a web developer with a knowledge in front end and back end language,responsive frame
+                    work,database, and code practices. My objective is simply to be the best web developer that I can be
+                    and to contribute to the technology industry all that I know and can do. In this project I learnt
+                    how to build my own portfolio app using all frontend and backend language, framework, database which
+                    I learnt from Thruskills. Now I am able build a website which is responsive. This project includes
+                    all the aspects of the full stack development.
+                    A very small project though but can be really good to start learning MERN.
+
+
+
+                    <ul class="social " style="list-style-type:none ;">
+                        <li>
+                            <!-- your twitter profile url -->
+                            <a href="https://twitter.com/login">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- your facebook profile url -->
+                            <a href="https://www.facebook.com/">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- your linkedin profile url -->
+                            <a href="https://www.linkedin.com/feed//">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- your personal website url -->
+                            <a href="">
+                                <i class="fab fa-globe"></i>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+            <!-- my-image -->
+            <div class="col-md-4 col-6 ml-5 mt-4">
+                <img class=" w-75 h-75 mt-5 ml-5 " src="/images/shankar.jpg" style="border-radius: 1500px;">
+            </div>
+        </div>
+        <hr>
+        <!-- form -->
+
+
+        <div>
+            <div class="form-inline bg-warning  mb-3 p-5  w-100 d-flex justify-content-center "
+                style="margin-top: -34px;">
+                <marquee bgcolor="black" style="color: white;font-size: 20px;text-transform: uppercase;">i am software
+                    developer
+
+                </marquee>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 mt-3">
+                            <h2>Subscribe to my newsletter</h2>
+                        </div>
+
+                        <div class="col-md-6 text-right mb-4 mt-3">
+                            <form action="/subscribe" method="POST" class="form-inline ml-5">
+                                <br>
+                                <input class="form-control form-control-sm mr-3 w-75" type="text" name="email"
+                                    placeholder="Please enter email " aria-label="Search">
+                                <button type="submit" class="btn btn-sm btn-warning"> <i class="fa fa-bell"
+                                        aria-hidden="true"></i>
+                                </button>
+                            </form>
+                            {{#if success}}
+
+                            <p class="text-success mt-5">Subscribed successfully</p>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+
+                </form>
+            </div>
+        </div>
+
+
+
+        <h1 class=" text-white" style="margin-left: 170px; margin-top:3px;">recent </h1>
+        <p style="margin-left: 85%;"><a class="text-white" href="/projects">view all</a></p>
+        <div class="container">
+            <!-- Projects Page-->
+
+            <div class="row no-padding">
+                {{#each projects}}
+                <div class="col-sm-4  mb-4">
+                    <div class="card">
+                        <a href="/projects/{{_id}}"><img class="card-img-top" src="{{image}}" alt=""
+                                height="250px" /></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="/projects/{{_id}}">{{this.title}}</a>
+                            </h4>
+                            <p class="card-text">
+                                {{this.description}}
+                            </p>
+                            <a class="btn btn-primary" href="/projects/{{_id}}">View Project
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <!-- blogs Page-->
+            <h1 class="text-white">Recent post</h1>
+            <p style="margin-left: 95%;"><a class="text-white" href="/blogs">view all</a></p>
+            <div class="row no-padding">
+                {{#each blogs}}
+                <div class="col-sm-4 mt-4 mb-4">
+                    <div class="card">
+                        <a href="/blogs/{{_id}}"><img class="card-img-top" src="{{image}}" alt="" height="250px" /></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="/blogs/{{_id}}">{{title}}</a>
+                            </h4>
+                            <p class="card-text">
+                                {{description}}
+                            </p>
+                            <a class="btn btn-primary" href="/blogs/{{_id}}">View Project
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>

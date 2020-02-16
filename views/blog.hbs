@@ -1,0 +1,47 @@
+<div class="d-flex list-unstyled" style="margin-left: 150px;">
+    <li class=""><a class="text-white" href="home.html">home/</a></li>
+    <li class="ml-2"><a  class="text-white" href="#">Blog</a></li>
+</div>
+
+
+
+
+<div class="container">
+ 
+    <h1>{{title}}</h1>
+    <div class="row no-padding">
+        {{#each blogs}}
+        <div class="col-sm-4 mt-4 mb-4">
+            <div class="card">
+                <a href="/blogs/{{_id}}"><img class="card-img-top" src="{{image}}" alt="" height="250px" /></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="/blogs/{{_id}}">{{title}}</a>
+                    </h4>
+                    <p class="card-text">
+                        {{description}}
+                    </p>
+                    <a class="btn btn-primary" href="/blogs/{{_id}}">View Project
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                   
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    </div>
+
+
+
+
+<div>
+
+    <ul class="pagination pagination-lg d-flex justify-content-center">
+        <li class="page-item "><a class="page-link" href="/">
+                <</a> </li> <li class="page-item"><a class="page-link" href="/details-1">1</a></li>
+        <li class="page-item"><a class="page-link" href="/about">2</a></li>
+        <li class="page-item"><a class="page-link" href="/contact">3</a></li>
+        <li class="page-item"><a class="page-link" href="/blog-details">></a></li>
+    </ul>
+</div>

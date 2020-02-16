@@ -1,0 +1,15 @@
+.card {
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+
+  background: white;
+  transition: width 3s;
+  transition-delay: 1s;
+  transition: width 2s, height 2s, transform 2s;
+  -ms-transform: rotate(20deg); /* IE 9 */
+  transform: rotate(20deg);
+  transform: scale(2, 3);
+}

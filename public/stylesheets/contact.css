@@ -1,0 +1,71 @@
+.line {
+  border-left: 1px solid #ccc;
+}
+
+.main {
+  background-image: url("//images/background.jpg");
+}
+.images img {
+  height: 200px;
+  width: 200px;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+*/ .col-md-9 {
+  margin-top: 30px;
+}
+.icons i {
+  top: 40px;
+  width: 10px;
+  font-size: 25px;
+  margin-left: 50px;
+}
+.icons p {
+  margin-left: 42px;
+  font-size: 23px;
+}
+.p {
+  font-size: 27px;
+  margin-left: 50px;
+}
+hr {
+  width: 200px;
+  margin-left: 50px;
+}
+.mb-4 hr {
+  margin-right: 200px;
+  width: 700px;
+}
+.label label {
+  margin-left: 25px;
+  font-size: 25px;
+  font-weight: bold;
+  color: orange;
+}
+.label input {
+  margin-left: 10px;
+  width: 230px;
+}
+.center {
+  text-align: center;
+}
+.hover :hover {
+  color: orange;
+}
+
+
+/* for tablat  view */
+@media (max-width: 768px) {
+  .p {
+    font-size: 27px;
+    margin-left: 60px;
+  }
+  .breadcrumb {
+    margin-top: -40px;
+  }
+
+  .images img {
+    height: 100px;
+    width: 100px;
+  }
+}
